@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    
+    <style>
+        *{
+
+        }
+        body{
+            margin: 0;
+        }
+
+        .app{
+
+            /*display: flex;
+            flex-direction: column;*/
+            height:100vh;
+            width:100%;
+
+        }
+        .header{
+            background-color: darkslateblue;
+            height: 45px;
+            color: azure;
+            /*display: flex;
+            flex-direction: row;*/
+            align-content: center;
+            display: flex;
+            flex: 1;
+
+        }
+        .logo{
+            flex:1
+        }
+        .search{
+            flex:2;
+            padding: 5px;
+        }
+        .links{
+            flex:1
+        }
+
+        .content{
+            /*display: flex;
+            */
+            flex: 1;
+            border-right: 1px;
+            border-color: black;
+        }
+        .profile-details
+        {
+            flex:0.7;
+            border-right: 1px solid black;
+            padding: 20px;
+        }
+        .project-list{
+            flex:2;
+            border-right: 1px solid black;
+            margin-inline-start: 12px;
+        }
+
+        .project-header{
+            height: 10%;
+        }
+        .activity-list{
+            background: #efefef;
+            flex:1;
+            padding: 20px;
+
+        }
+        .time{
+            display: flex;
+            flex-direction: row-reverse;
+        }
+        .flex-row{
+            display: flex;
+            flex-direction: row;
+        }
+
+        .flex-column{
+            display: flex;
+            flex-direction: column;
+        }
+        .border-bottom{
+            border-bottom: 1px solid black;
+        }
+        .image{
+            width: 100%;
+            height: 12%;
+
+        }
+
+        img{
+            border-radius: 50%;
+            padding: 5px;
+        }
+        .detailpadding{
+            padding-left: 20px;
+        }
+        .central{
+            align-items: center;
+        }
+        .profile_one{
+
+        }
+        .button{
+            padding: 20px 40px 50px;
+        }
+    </style>
+
+</head>
+<body>
+<div class="app flex-column" >
+    <div class="header flex-row">
+
+        <div class="logo ">
+            <img src="image.jpg" width="50px" height="50px" alt="Image"/>
+        </div>
+
+        <div class="search flex-row">
+            <label>
+                <input type="text" placeholder="Search" size="70">
+            </label>
+        </div>
+
+        <div class="links flex-row">
+            <div>
+        </div>
+        </div>
+
+    </div>
+    <div class="content flex-row">
+        <div class="profile-details flex-column">
+            <div class="profile_one flex-row central">
+                <img src="image.jpg" width="70px" height="70px" alt="Image" />
+                <p class="detailpadding"><b>Debbie Lewis</b><br>
+                    <img src="GitHub-Mark.png" width="20px" height="20px">
+                    debbielewis
+                </p>
+            </div>
+            <div class="button flex-column">
+                <button type="button" name="new_button" size="50px">New Button</button><br>
+                <button type="button" name="invite_team">Invite Team</button>
+            </div>
+        </div>
+        <div class="project-list flex-column">
+            <div class="project-header border-bottom">
+                <h3>Projects</h3>
+            </div>
+            <div class="project-header border-bottom flex-row">
+                <p>Workcation</p>
+            </div>
+        </div>
+        <div class="activity-list flex-column ">
+                <b>Activity</b>
+            <div class="image flex-row border-bottom" >
+                <img src="image.jpg" width="30px" height="30px" alt="Image"/>
+                <p>You<br class=" flex-row">
+                    Deployed Workcation (2d89f0c8) in master) to production
+                </p>
+                <p class="time">1h</p>
+            </div>
+
+
+            <div class="image flex-row border-bottom" >
+                <img src="image.jpg" width="30px" height="30px" alt="Image"/>
+                <p>You<br class=" flex-row">
+                    Deployed KiteTail (249d660) in master) to staging
+                </p>
+                <p class="time">12h</p>
+            </div>
+
+
+            <div class="image flex-row border-bottom" >
+                <img src="image.jpg" width="30px" height="30px" alt="Image"/>
+                <p>You<br class=" flex-row">
+                    Deployed Easywire (11464223) in master) to production
+                </p>
+                <p class="time">2d</p>
+            </div>
+
+
+            <div class="image flex-row border-bottom" >
+                <img src="image.jpg" width="30px" height="30px" alt="Image"/>
+                <p>You<br class=" flex-row">
+                    Deployed Easywire (dad28e95) in master) to production
+                </p>
+                <p class="time">5d</p>
+            </div>
+
+            <div class="image flex-row border-bottom" >
+                <img src="image.jpg" width="30px" height="30px" alt="Image"/>
+                <p>You<br class=" flex-row">
+                    Deployed Easywire (624bc94c) in master) to production
+                </p>
+                <p class="time">5d</p>
+            </div>
+
+
+            <div class="image flex-row border-bottom" >
+                <img src="image.jpg" width="30px" height="30px" alt="Image"/>
+                <p>You<br class=" flex-row">
+                    Deployed Workcation (e111f80e) in master) to production
+                </p>
+                <p class="time">1w</p>
+            </div>
+
+
+            <div class="image flex-row border-bottom" >
+                <img src="image.jpg" width="30px" height="30px" alt="Image"/>
+                <p>You<br class=" flex-row">
+                    Deployed Resumaid (5e136005) in master) to staging
+                </p>
+                <p class="time">1w</p>
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>
