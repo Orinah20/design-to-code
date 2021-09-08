@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -6,11 +7,9 @@
 }
 
 .body{
-    display: flex;
     flex-direction: column;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 }
-
 .shortcut-icon{
     border-radius: 50%;
 }
@@ -28,68 +27,116 @@
     background-color: #4f46e5;
     display: flex;
     width: 100%;
-    height: 50px;
+    height: 51px;
     padding: 10px 20px;
-
 }
 
 .nav_items{
     display: flex;
     width: 100%;
-    height: 100%;
 }
 
 .nav_item{
-    width: 33.333%;
     display: flex;
-    align-items:center;
-    justify-content: center;
+    justify-content: flex-end;
 }
 
 .logo{
-    align-items: flex-start;
-    flex-direction: column;
-    color: #a4b3fc;
+    width: 15%;
 }
 
 .logos{
-    position: absolute;
-    top: 0;
-    right: 10px;
+    display: none;
 }
 
-.search-projects input{
-    height: 40px;
-    width: 28rem;
-    margin: auto;
+.logo_menu{
+    position: absolute;
+    left: 20px;
+    color: #a4b3fc;
+}
+
+.logo_menu:hover,
+.logo_menu:active{
+    color: white;
+}
+
+.search{
+    width: 70%;
+    background: #5b57e9;
     border-radius: 10px;
-    font-family: inherit;
+    flex-shrink: 2;
+
+}
+
+.search-project{
+    width: 100%;
     position: relative;
+    white-space: nowrap;
+    overflow: -moz-hidden-unscrollable;
+}
+
+.search-project input{
+    width: 96%;
+    border-radius: 10px;
+    color: #e3e3ff;
+}
+
+.search-projects{
+    background: #5b57e9;
+    outline: none;
     border: none;
-    display: none;
+    color: #bcc5ff;
+    height: 1.95rem;
+}
+
+.search-icon,
+::placeholder{
+    color:#d4d5ff ;
+}
+
+.search-project input,
+::placeholder{
+    text-indent: 5px;
+}
+
+label{
+    padding-left: 10px;
 }
 
 .links{
-    justify-content: flex-end;
-    display: none;
+    width: 15%;
 }
 
 .nav_item--link{
+    display: none;
+}
+
+.images{
     display: flex;
-    /*width: 33.33%;*/
+}
+
+.image{
+    display: flex;
+    border-radius: 50%;
+    height: 2rem;
+    width: 2rem;
+    z-index: 3;
 }
 
 .contents{
     display: flex;
-    min-width: 250px;
     height: auto;
+}
+
+.profile{
+    display: none;
 }
 
 .content{
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 150vh;
+    height: 110vh;
     width: 100vw;
     border: 0;
 }
@@ -103,6 +150,18 @@
     padding: 10px 20px;
 }
 
+.title-project{
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.project-details__button,
+.project-details__title{
+    display: flex;
+    width: 50%;
+    align-items: center;
+}
+
 .project-details__title{
     justify-content: flex-start;
 }
@@ -114,30 +173,17 @@
 .sort_button{
     width: 110px;
     height: 2.2rem;
-    border-color: #f3e3e3;
+    border: 1px solid #cccccc;
     border-radius: 5px;
     display: flex;
     vertical-align: middle;
     align-items: center;
     background-color: #ffffff;
+    outline: none;
 }
 
 .flex-button{
     width: 33.33%;
-}
-
-.icon-left{
-    position: absolute;
-    z-index: 2;
-    right: 105px;
-}
-
-.project-details__button,
-.project-details__title{
-    display: flex;
-    width: 50%;
-    align-items: center;
-
 }
 
 .project-content{
@@ -166,25 +212,13 @@
     flex-wrap: wrap;
 }
 
-.project-details__name{
-    flex-direction: row-reverse;
-    text-align: right;
-    width: 63%;
-    flex-wrap: wrap-reverse;
-}
-
-.name-details__items{
-    display: flex;
-    padding-left: 8px;
-    flex-wrap: wrap;
-}
-
 .online-notation{
     height: 14px;
     width: 14px;
     position: relative;
-    background-image: radial-gradient(#31bb8d 20%, #d3fae6 45% , transparent 90%);
+    background-image: radial-gradient(#2aa17a 20%, #c0e5d0 45% , transparent 90%);
     border-radius: 50%;
+    top: 2px;
 }
 
 .offline-notation{
@@ -193,10 +227,7 @@
     position: relative;
     background-image: radial-gradient(#84878f 20%, #e7e8eb 45% , transparent 90%);
     border-radius: 50%;
-}
-
-.title-project{
-    font-size: 1.1rem;
+    top: 2px;
 }
 
 .title{
@@ -208,19 +239,18 @@
     font-weight: 500;
 }
 
-.git{
-    padding-right: 8px;
-    display: flex;
-    position: relative;
-    left: 2px;
-    top: 2px;
+.project-details__name{
+    flex-direction: row-reverse;
+    text-align: right;
+    width: 63%;
+    flex-wrap: wrap-reverse;
 }
 
 .checked{
     position: relative;
     top: 0.09rem;
     width: 8%;
-    color: #fcd34d;
+    color: #ffce28;
     justify-content: center;
 }
 
@@ -232,31 +262,80 @@
     justify-content: center;
 }
 
+.name-details__items{
+    display: flex;
+    padding-left: 8px;
+    flex-wrap: wrap;
+}
+
+.git{
+    padding-right: 8px;
+    display: flex;
+    position: relative;
+    left: 2px;
+    top: 2px;
+}
+
 .personal-details{
     display: flex;
     left: 5px;
 }
 
-
-.search-projects input[placeholder]{
-    position: relative;
-    text-indent: 30px;
-}
-
-.search-icon{
-    position: absolute;
-    left: 10px;
+button{
+    font-weight: 500;
 }
 
 .activity{
     display: none;
 }
+
 @media (min-width: 48rem){
+    .nav-items{
+        width: 100%;
+    }
+
+    .nav_item{
+        display: flex;
+    }
+
+    .logo{
+        width: 5%;
+    }
+
+    .search{
+        width: 58%;
+    }
+
+    .links{
+        width: 37% ;
+    }
+
+    .nav_item--link{
+        display: flex;
+        justify-content: flex-end;
+        padding: 8px 15px;
+        color: #c0ceff;
+    }
+
+    .images{
+        padding: 0;
+    }
+
+    .image{
+        display: flex;
+        border-radius: 50%;
+        z-index: 3;
+        align-content: center;
+    }
+
+    .profile{
+        display: none;
+    }
+
     .content{
         display: flex;
         flex-direction: column;
         align-items: center;
-        height: 120vh;
         border: 0;
         width: 65%;
         border-right: 1px solid #cccccc;
@@ -280,6 +359,7 @@
         width: 35%;
         padding: 10px 20px;
         flex-shrink: 2;
+        background-color: #f5f5f5;
     }
 
     .activity-header {
@@ -302,6 +382,12 @@
         width: 10%;
     }
 
+    .activity-profile_image{
+        height: 1.8rem;
+        width: 1.8rem;
+        border-radius: 50%;
+    }
+
     .activity-main{
         display: flex;
         flex-direction: column;
@@ -319,12 +405,7 @@
         justify-content: flex-start;
         width: 50%;
         padding: 5px;
-    }
-
-    .activity-details_content{
-        width: 100%;
-        flex-wrap: wrap;
-        padding: 5px;
+        font-weight: 500;
     }
 
     .activity-details_time{
@@ -334,9 +415,203 @@
         padding: 5px;
     }
 
-    .activity-profile_image{
-        height: 1.8rem;
-        width: 1.8rem;
+    .activity-details_content{
+        width: 100%;
+        flex-wrap: wrap;
+        padding: 5px;
+    }
+}
+
+@media (min-width: 65rem){
+    .nav_items{
+        display: flex;
+        width: 100%;
+        height: 100%;
+    }
+
+    .nav_item{
+        display: flex;
+        align-items:center;
+        justify-content: center;
+        padding: 0 0 0 10px;
+    }
+
+    .logo{
+        align-items: flex-start;
+        flex-direction: column;
+        color: #a4b3fc;
+        padding-left: 10px;
+        width: 20%;
+    }
+
+    .logos{
+        display: flex;
+        position: absolute;
+        left: 30px;
+    }
+
+    .logo_menu{
+        display: none;
+    }
+
+    .search{
+        width: 55%;
+        background: #5b57e9;
+        border-radius: 10px;
+    }
+
+    .search-project{
+        width: 100%;
+        position: relative;
+    }
+
+    .search-projects input{
+        width: 96%;
+        background: #5b57e9;
+        outline: none;
+        border: none;
+        color: #bcc5ff;
+    }
+
+    .search-icon,
+    ::placeholder{
+        color:#d4d5ff ;
+    }
+
+    .search-project input,
+    ::placeholder{
+        text-indent: 5px;
+    }
+
+    .links{
+        justify-content: flex-end;
+        width: 25%;
+    }
+
+    .nav_item--link{
+        display: flex;
+        justify-content: flex-end;
+        padding: 0 10px;
+        color: #c0ceff;
+    }
+
+    .images{
+        display: flex;
+    }
+
+    .image{
         border-radius: 50%;
+        height: 2rem;
+    }
+
+    .profile{
+        display: flex;
+        flex-direction: column;
+        width: 20%;
+        padding: 10px 30px;
+    }
+
+    .profile-container{
+        display: flex;
+        flex-direction: column;
+        padding: 10px 5px;
+    }
+
+    .profile-details{
+        display: flex;
+    }
+
+    .profile-details_image{
+        display: flex;
+    }
+
+    .profile-details_image > img{
+        border-radius: 50%;
+        height: 3rem;
+        width: 3rem;
+    }
+
+    .profile-details_container{
+        display: flex;
+        flex-direction: column;
+        padding: 5px 10px;
+        width: 100%;
+    }
+
+    .profile-details_name,
+    .profile-details_username{
+        display: flex;
+        height: 1.3rem;
+    }
+
+    .profile-buttons{
+        display: flex;
+        flex-direction: column;
+        padding: 10px 0;
+        width: 100%;
+    }
+
+    .profile_details-new_project,
+    .profile_details-invite_team{
+        padding: 5px 0;
+        font-weight: 500;
+    }
+
+    .profile_details-new_project > button,
+    .profile_details-invite_team > button{
+        height: 2rem;
+        width: 100%;
+        border-radius: 5px;
+    }
+
+    .profile_details-new_project > button{
+        background-color: #4f46e5;
+        color: #ffffff;
+        border: none;
+    }
+
+    .profile_details-invite_team > button{
+        border: 1px solid #bfc1cb;
+        background-color: white;
+    }
+
+    .profile_details-member,
+    .profile_details-projects{
+        display: flex;
+        padding: 10px 0;
+    }
+
+    .profile_details-member > i,
+    .profile_details-projects > i{
+        padding-right: 5px;
+    }
+
+    .tick,.project{
+        position: relative;
+        top: 2px;
+    }
+
+    .tick,
+    .tick + p,
+    .folder,
+    .folder + p{
+        color: #757575;
+    }
+
+    .content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 0;
+        width: 55%;
+        border-right: 1px solid #cccccc;
+        border-left: 1px solid #cccccc;
+    }
+
+    .activity{
+        display: flex;
+        flex-direction: column;
+        width: 25%;
+        padding: 10px 20px;
     }
 }
