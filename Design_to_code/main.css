@@ -1,4 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@font-face {
+    font-family: Inter;
+    src: url("Fonts/Inter/static/Inter-Regular.ttf") format("truetype");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Inter;
+    src: url("Fonts/Inter/static/Inter-SemiBold.ttf") format("truetype");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Inter;
+    src: url("Fonts/Inter/static/Inter-Medium.ttf") format("truetype");
+    font-weight: 600;
+}
 
 *{
     box-sizing: border-box;
@@ -14,12 +31,16 @@
     border-radius: 50%;
 }
 
+.open{
+    display: block !important;
+}
+
 .backdrop {
     display: none;
     height: 100%;
     width: 100%;
-    background-color: rgba(148, 148, 148, 0.7);
-    position: absolute;
+    background-color: rgba(134, 134, 134, 0.7);
+    position: fixed;
     z-index: 20;
 }
 
@@ -28,7 +49,7 @@
     display: flex;
     width: 100%;
     height: 51px;
-    padding: 10px 20px;
+    padding: 10px 10px;
 }
 
 .nav_items{
@@ -51,6 +72,7 @@
 
 .logo_menu{
     position: absolute;
+    top: 12px;
     left: 20px;
     color: #a4b3fc;
 }
@@ -65,7 +87,6 @@
     background: #5b57e9;
     border-radius: 10px;
     flex-shrink: 2;
-
 }
 
 .search-project{
@@ -76,7 +97,7 @@
 }
 
 .search-project input{
-    width: 96%;
+    width: 90%;
     border-radius: 10px;
     color: #e3e3ff;
 }
@@ -130,6 +151,97 @@ label{
 
 .profile{
     display: none;
+}
+
+.side-nav{
+    display: none;
+    height: 100vh;
+    width: 288px;
+    position: fixed;
+    background: #fafafa;
+    z-index: 25;
+    top: 0;
+    left: 0;
+    flex-shrink: 0;
+}
+
+.side-nav__bar{
+    display: flex;
+    height: 51px;
+    width: 100%;
+    background-color: #4f46e5;
+    padding: 10px 20px;
+    align-items: center;
+
+}
+
+.side-nav__logo{
+    height: 50px;
+    width: 50px ;
+    position: absolute;
+    top: 0;
+    left: 10px;
+}
+
+.side-nav__icon{
+    display: flex;
+    height: 30px;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.side-nav__content{
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+}
+
+.side-nav__contents-top,
+.side-nav__contents-bottom{
+    display: flex;
+    height: 50%;
+    font-size: 1rem;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 0;
+}
+
+.side-nav__contents-top{
+    justify-content: flex-start;
+}
+
+.side-nav__contents-bottom{
+    justify-content: flex-end;
+}
+
+.side-nav__details{
+    padding: 10px 0;
+    background-color: #f8f8f8;
+    width: 100%;
+    text-align: center;
+}
+
+.border-down{
+    border-bottom: 1px solid #000000;
+    background-color: #ffffff;
+}
+
+.border-up{
+    border-top: 1px solid #000000;
+    background-color: #ffffff;
+}
+
+.close-icon{
+    font-size: 1.5rem;
+    color: #bcc5ff;
+}
+
+.close-icon:hover,
+.close-icon:active{
+    color: white;
 }
 
 .content{
@@ -212,22 +324,20 @@ label{
     flex-wrap: wrap;
 }
 
-.online-notation{
+.project-title__status{
     height: 14px;
     width: 14px;
     position: relative;
-    background-image: radial-gradient(#2aa17a 20%, #c0e5d0 45% , transparent 90%);
     border-radius: 50%;
     top: 2px;
 }
 
+.online-notation{
+    background-image: radial-gradient(#2aa17a 20%, #c0e5d0 45% , transparent 90%);
+}
+
 .offline-notation{
-    height: 14px;
-    width: 14px;
-    position: relative;
     background-image: radial-gradient(#84878f 20%, #e7e8eb 45% , transparent 90%);
-    border-radius: 50%;
-    top: 2px;
 }
 
 .title{
@@ -276,6 +386,10 @@ label{
     top: 2px;
 }
 
+.git i{
+    color: #84878f;
+}
+
 .personal-details{
     display: flex;
     left: 5px;
@@ -299,11 +413,17 @@ button{
     }
 
     .logo{
-        width: 5%;
+        width: 7%;
     }
 
     .search{
-        width: 58%;
+        width: 55%;
+    }
+
+    .search-project input{
+        width: 96%;
+        border-radius: 10px;
+        color: #e3e3ff;
     }
 
     .links{
@@ -366,7 +486,7 @@ button{
         display: flex;
         height: 2rem;
         padding: 5px 0;
-        font-size: 0.9rem;
+        font-size: 0.95rem;
         font-weight:bold;
     }
 
@@ -447,7 +567,6 @@ button{
     .logos{
         display: flex;
         position: absolute;
-        left: 30px;
     }
 
     .logo_menu{
@@ -596,6 +715,10 @@ button{
     .folder,
     .folder + p{
         color: #757575;
+    }
+
+    .side-nav{
+        visibility: hidden;
     }
 
     .content{

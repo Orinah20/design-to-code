@@ -6,13 +6,36 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Design to code</title>
-    <link rel="shortcut icon" href="Images/logo.png" class="shortcut-icon"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="shortcut icon" href="Images/logo.png" type="image/x-icon"/>
+    <link rel="stylesheet" href="Icons/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="main.css"/>
 </head>
 <body>
 <section class="body">
     <div class="backdrop"></div>
+    <section class="side-nav">
+        <div class="side-nav__bar">
+            <div>
+                <img src="Images/logo.png" class="side-nav__logo" alt="Profile Picture">
+            </div>
+            <div class="side-nav__icon">
+                <i class="fa fa-times close-icon" aria-hidden="true"></i>
+            </div>
+        </div>
+        <div class="side-nav__content">
+            <div class="side-nav__contents-top">
+                <div class="side-nav__details">Dashboard</div>
+                <div class="side-nav__details">Domain</div>
+                <div class="side-nav__details border-down"></div>
+            </div>
+            <div class="side-nav__contents-bottom">
+                <div class="side-nav__details border-up"></div>
+                <div class="side-nav__details">Profile</div>
+                <div class="side-nav__details">Settings</div>
+                <div class="side-nav__details">. Terms and conditions .</div>
+            </div>
+        </div>
+    </section>
     <header class="nav-bar">
         <nav class="nav_items">
             <div class="nav_item logo">
@@ -36,6 +59,7 @@
             </div>
         </nav>
     </header>
+
     <section class="contents">
         <div class="profile">
             <div class="profile-container">
@@ -88,11 +112,10 @@
                     </button>
                 </div>
             </div>
-
             <div class="project-content">
                 <div class="project-lists">
                     <div class="project-title__name">
-                        <div class="online-notation"></div>
+                        <div class="project-title__status online-notation"></div>
                         <div class="title"><p>Workcation</p></div>
                     </div>
                     <div class="project-details__name">
@@ -121,7 +144,7 @@
             <div class="project-content">
                 <div class="project-lists">
                     <div class="project-title__name">
-                        <div class="online-notation"></div>
+                        <div class="project-title__status online-notation"></div>
                         <div class="title"><p>Easywire</p></div>
                     </div>
                     <div class="project-details__name">
@@ -148,7 +171,7 @@
             <div class="project-content">
                 <div class="project-lists">
                     <div class="project-title__name">
-                        <div class="online-notation"></div>
+                        <div class="project-title__status online-notation"></div>
                         <div class="title"><p>Workflow</p></div>
                     </div>
                     <div class="project-details__name">
@@ -175,7 +198,7 @@
             <div class="project-content">
                 <div class="project-lists">
                     <div class="project-title__name">
-                        <div class="offline-notation"></div>
+                        <div class="project-title__status offline-notation"></div>
                         <div class="title"><p>KiteTail</p></div>
                     </div>
                     <div class="project-details__name">
@@ -202,7 +225,7 @@
             <div class="project-content">
                 <div class="project-lists">
                     <div class="project-title__name">
-                        <div class="online-notation"></div>
+                        <div class="project-title__status online-notation"></div>
                         <div class="title"><p>Talk Slides</p></div>
                     </div>
                     <div class="project-details__name">
@@ -229,7 +252,7 @@
             <div class="project-content">
                 <div class="project-lists">
                     <div class="project-title__name">
-                        <div class="online-notation"></div>
+                        <div class="project-title__status online-notation"></div>
                         <div class="title"><p>Personal Website</p></div>
                     </div>
                     <div class="project-details__name">
@@ -256,7 +279,7 @@
             <div class="project-content">
                 <div class="project-lists">
                     <div class="project-title__name">
-                        <div class="offline-notation"></div>
+                        <div class="project-title__status offline-notation"></div>
                         <div class="title"><p>Digest</p></div>
                     </div>
                     <div class="project-details__name">
@@ -385,5 +408,6 @@
         </div>
     </section>
 </section>
+<script src="main.js"></script>
 </body>
 </html>
